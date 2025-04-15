@@ -1,0 +1,164 @@
+<!doctype="html">
+<html>
+  <head>
+    <html lang="es">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AutoEval-EcoBa1</title>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/redmond/jquery-ui.css">
+      <link rel="stylesheet" href="newStyle7.css">
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+      <script defer src="newScript7.js"></script>
+  </head>
+    <body>
+     <header>
+      <figure>
+      <picture>
+        <source srcset="./image/ALaguna-400.png" media="(max-width:480px)">
+        <source srcset="./image/ALaguna-800.png" media="(min-width:481px)">
+        <img src="./image/ALaguna-1.jpg" alt="Acceso al Instituto Andrés Laguna">
+      </picture>
+      <figcaption>Acceso-ALaguna</figcaption>
+    </figure>
+  </header>
+    <form action="/iesandreslaguna/educa.jcyl.php" method="post">
+    <fieldset class="datos">
+    <legend>Datos personales</legend>
+      <p>
+        <label>Nombre y apellidos:<br><input type="text" name="curso" size="50" required autofocus></label>
+        <br><label>Curso:<br><input type="text" name="curso" maxlength="30"required></label>
+        <br><label>Grupo:<br><input type="text" name="grupo" maxlength="30"required></label>
+      </p>
+      <p>
+        <br><label>Completar datos personales: <progress max="10" value="2">2/10</progress></label>
+      </p>
+    </fieldset>
+     <fieldset class="qt">
+     <legend>Autoevaluación tipo-test (Prueba inicial Economía)</legend>
+     <p>
+      <button class="autoEval" id="startQuickTest" type="button">iniciarAutoTest</button>
+     </p>
+     <div class="autoEvalEco" id="paneles">
+     <h3><strong>1. La escasez económica:</strong></h3>
+       <div class="qt1">
+         <ol type="a">
+              <li><input type="radio" id="a011" value= "011" name="qt1"><label for="a011"> Es la falta de bienes y servicios para satisfacer las necesidades mínimas.</label></li>
+              <li><input type="radio" id="a012" value= "012" name="qt1" data-correct="true"><label for="a012"> Afecta a todos y de manera diferente.</label></li>
+              <li><input type="radio" id="a013" value= "013" name="qt1"><label for="a013"> Es posible conseguir todos los bienes que deseamos.</label></li>
+          </ol>
+       </div>
+        <div class="qt2">
+      <h3><strong>2. Una persona se encuentra en pobreza absoluta cuando:</strong></h3>
+        <div>  
+         <ol type="a">
+              <li><input type="radio" id="a021" value= "021" name="qt2"><label for="a021"> Puede satisfacer sus necesidades primarias y no las secundarias.</label></li>
+              <li><input type="radio" id="a022" value= "022" name="qt2" data-correct="true"><label for="a022"> No es capaz de cubrir sus necesidades básicas.</label></li>
+              <li><input type="radio" id="a023" value= "023" name="qt2"><label for="a023"> No tiene suficiente nivel de renta para cubrir todo lo que necesita.</label></li>
+          </ol>
+        </div>
+      <h3><strong>3. En la economía positiva:</strong></h3>
+          <div class="qt3">
+           <ol type="a">
+              <li><input type="radio" id="a031" value= "031" name="qt3" data-correct="true"><label for="a031"> Se explica la realidad.</label></li>
+              <li><input type="radio" id="a032" value= "032" name="qt3"><label for="a032"> Se explica lo que debería ser.</label></li>
+              <li><input type="radio" id="a033" value= "033" name="qt3"><label for="a033"> Se hacen recomendaciones de política económica.</label></li>
+           </ol>
+          </div>
+      <h3><strong>4. El estudio de la inflación de España es:</strong></h3>
+          <div class="qt4">
+           <ol type="a">
+              <li><input type="radio" id="a041" value= "041" name="qt4"><label for="a041"> Economía normativa.</label></li>
+              <li><input type="radio" id="a042" value= "042" name="qt4"><label for="a042"> Microeconomía.</label></li>
+              <li><input type="radio" id="a043" value= "043" name="qt4" data-correct="true"><label for="a043"> Macroeconomía.</label></li>
+           </ol>
+          </div>
+          <div class="qt5">
+      <h3><strong>5. El análisis marginal nos indica:</strong></h3>
+          <div>
+           <ol type="a">
+              <li><input type="radio" id="a051" value= "051" name="qt5"><label for="a051"> La comparación de los costes de los diferentes productos.</label></li>
+              <li><input type="radio" id="a052" value= "052" name="qt5"><label for="a052"> La comparación de los beneficios marginales.</label></li>
+              <li><input type="radio" id="a053" value= "053" name="qt5" data-correct="true"><label for="a053"> La valoración de los beneficios y costes marginales.</label></li>
+           </ol>
+          </div>
+      <h3><strong>6. Según la mano invisible del mercado, si hay escasez de bienes:</strong></h3>
+          <div class="qt6">
+           <ol type="a">
+              <li><input type="radio" id="a061" value= "061" name="qt6"><label for="a061"> El precio baja.</label></li>
+              <li><input type="radio" id="a062" value= "062" name="qt6" data-correct="true"><label for="a062"> El precio sube.</label></li>
+              <li><input type="radio" id="a063" value= "063" name="qt6"><label for="a063"> Todo el mundo lo querrá producir.</label></li>
+           </ol>
+          </div>
+      <h3><strong>7. El origen de la economía de mercado se basa en el autor:</strong></h3>
+          <div class="qt7">
+           <ol type="a">
+              <li><input type="radio" id="a071" value= "071" name="qt7"><label for="a071"> Keynes.</label></li>
+              <li><input type="radio" id="a072" value= "072" name="qt7"><label for="a072"> Karl Marx.</label></li>
+              <li><input type="radio" id="a073" value= "073" name="qt7" data-correct="true"><label for="a073"> Adam Smith.</label></li>
+           </ol>
+          </div>
+      <h3><strong>8. Los agentes económicos son:</strong></h3>
+          <div class="qt8">
+           <ol type="a">
+              <li><input type="radio" id="a081" value= "081" name="qt8"><label for="a081"> Tierra, capital y trabajo.</label></li>
+              <li><input type="radio" id="a082" value= "082" name="qt8"><label for="a082"> Los encargados de tomar las decisiones en la economía.</label></li>
+              <li><input type="radio" id="a083" value= "083" name="qt8" data-correct="true"><label for="a083"> Los que proporcionan los recursos productivos a la economía.</label></li>
+           </ol>
+          </div>
+      <h3><strong>9. El capital humano está formado por:</strong></h3>
+         <div class="qt9">
+          <ol type="a">
+              <li><input type="radio" id="a091" value= "091" name="qt9"><label for="a091"> El conjunto de trabajadores de la empresa.</label></li>
+              <li><input type="radio" id="a092" value= "092" name="qt9" data-correct="true"><label for="a092"> El conjunto de conocimientos y experiencia de los trabajadores.</label></li>
+              <li><input type="radio" id="a093" value= "093" name="qt9"><label for="a093"> El conjunto de máquinas, edificios e instalaciones de la empresa.</label></li>
+          </ol>
+         </div>
+      <h3><strong>10. En la economía planificada, el qué producir depende de:</strong></h3>
+          <div class="qt10">
+           <ol type="a">
+              <li><input type="radio" id="a101" value= "101" name="qt10"><label for="a101"> El principio de soberanía del consumidor.</label></li>
+              <li><input type="radio" id="a102" value= "102" name="qt10"><label for="a102"> El principio del beneficio.</label></li>
+              <li><input type="radio" id="a103" value= "103" name="qt10" data-correct="true"><label for="a103"> El principio de decisión del Estado.</label></li>
+           </ol>
+          </div>
+       </div>
+      <fieldset class="impulso">  
+      <legend>Al finalizar la prueba de nivel, pulsar ENVIAR para remitir al IES Andrés Laguna</legend>
+      <p>
+        <label for="actitud">¿Qué interés te merecen el comercio, los precios, el paro, el dinero o la Unión Europea?:<br></label>
+        <br>
+        <select id="actitud">
+          <option value="">Selecciona tu grado de interés por los asuntos económicos</option>
+          <option value="Enorme">Enorme</option>
+          <option value="Alto">Alto</option>
+          <option value="Indiferente">Indiferente</option>
+          <option value="Bajo">Bajo</option>
+          <option value="Nulo">Nulo</option>
+        </select>
+      </p>
+      <p>
+        <label>Probabilidad de realizar trabajos relacionados con la Economía: <meter min="0" low="10" high="90" max="100" value="90">90%</meter></label>
+      </p>
+      <p>Por favor, compruebe que sus Datos Personales son correctos antes de enviar este formulario.<br>
+      </p>
+      <p>
+        <button class="envio" type="button"><strong>ENVIAR</strong></button>
+      </p>
+    </fieldset>
+     <div class="botones">
+      <p>
+         <button class="resultado" id="resultQuickTest" type="button">resultadoAutoTest</button>
+         <button class="nuevaAutoEval" id="newQuickTest" type="button">nuevoAutoTest</button>
+      </p>
+     </div>
+     <div id="modal" class="modal">
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4>Aciertos destacados con fondo verde; puntuación obtenida sobre 10 puntos:</h4>
+      <p id="totalPuntos"></p>
+    </div>
+  </div>  
+    </form>
+   </body>
+</html>

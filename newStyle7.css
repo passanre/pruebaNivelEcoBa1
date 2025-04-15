@@ -1,0 +1,75 @@
+body{
+  margin-right:20px;
+}
+header{
+  display:flex;
+  text-align:center;
+  width:350px;
+  font-size:2rem;
+  margin-top:5px;
+  padding:1ex;
+  background-color:rgb(235, 219, 219);
+}
+picture>img{
+  max-width:100%;
+}
+form{
+  margin:2em;
+  padding:5px;
+}
+.datos{
+  input{
+  display:flex;
+  color:blue;
+  margin-top:1ex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20 px;
+  border-radius:1em;
+  background-color:whitesmoke;
+  }
+ }
+.qt>p:nth-child(2){
+  display:flex;
+  justify-content:center;
+}
+.impulso{
+  margin:20px;
+  padding:10px;
+}
+.impulso>p:last-child{
+  display:flex;
+  justify-content:center;
+  background-color:rgb(201, 226, 167);
+}
+.botones>p{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:90vw;
+  height:5vh;
+  gap:20px;
+  padding:2ex;
+  background-color:rgb(235, 219, 219);
+}
+#modal{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content{
+  text-align: center;
+}
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
